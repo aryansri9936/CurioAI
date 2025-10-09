@@ -1,0 +1,1 @@
+import React from 'react'; export default function Dashboard(){ return (<div className='card'><h3 className='font-semibold'>Dashboard</h3><div className='mt-2'><div>XP: 120</div><div>Level: 2</div><div>Badges: 🏅 Quiz Whiz</div></div></div>);} 
