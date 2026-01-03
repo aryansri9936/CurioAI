@@ -1,1 +1,169 @@
-@tailwind base; @tailwind components; @tailwind utilities; body { @apply bg-gradient-to-br from-indigo-50 to-white; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto; } .btn { @apply px-3 py-2 rounded shadow text-white bg-indigo-600 hover:bg-indigo-700; } .card { @apply bg-white p-4 rounded-2xl shadow-md; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxurious Design System */
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #818cf8;
+  --accent: #f59e0b;
+  --accent-light: #fcd34d;
+  --dark: #0f172a;
+  --dark-secondary: #1e293b;
+  --light: #f8fafc;
+  --border: #e2e8f0;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
+  @apply min-h-screen;
+}
+
+/* Luxury Card Styles */
+.card {
+  @apply bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl;
+  @apply border border-slate-700/50 backdrop-blur-xl;
+  @apply shadow-2xl hover:shadow-2xl transition-all duration-300;
+  @apply hover:border-indigo-500/30;
+}
+
+.card:hover {
+  @apply transform -translate-y-1 border-indigo-500/50;
+}
+
+/* Premium Button Styles */
+.btn {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-300;
+  @apply bg-gradient-to-r from-indigo-600 to-indigo-500;
+  @apply text-white shadow-lg hover:shadow-xl;
+  @apply border border-indigo-400/20 hover:border-indigo-300/40;
+  @apply hover:from-indigo-500 hover:to-indigo-400;
+  @apply cursor-pointer;
+}
+
+.btn:active {
+  @apply scale-95;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-300;
+  @apply bg-slate-700 border border-slate-600;
+  @apply text-slate-100 hover:bg-slate-600;
+  @apply shadow-lg hover:shadow-xl;
+}
+
+/* Input Styles */
+input, textarea, select {
+  @apply bg-slate-700/50 border border-slate-600 rounded-lg;
+  @apply text-slate-100 placeholder-slate-400;
+  @apply focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20;
+  @apply transition-all duration-200 backdrop-blur-sm;
+  @apply px-4 py-2.5;
+}
+
+input:hover, textarea:hover, select:hover {
+  @apply border-slate-500;
+  @apply bg-slate-700/70;
+}
+
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+  @apply text-slate-100 font-bold;
+  letter-spacing: -0.02em;
+}
+
+h1 { @apply text-4xl tracking-tight; }
+h2 { @apply text-3xl; }
+h3 { @apply text-2xl; }
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(135deg, #818cf8, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium Badge */
+.badge {
+  @apply px-3 py-1 rounded-full text-xs font-semibold;
+  @apply bg-indigo-500/20 text-indigo-300 border border-indigo-500/30;
+}
+
+.badge-success {
+  @apply bg-emerald-500/20 text-emerald-300 border-emerald-500/30;
+}
+
+.badge-warning {
+  @apply bg-amber-500/20 text-amber-300 border-amber-500/30;
+}
+
+/* Glass Morphism Effect */
+.glass {
+  @apply backdrop-blur-xl bg-white/10 border border-white/20;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Smooth Transitions */
+.smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Shadow Gradients */
+.shadow-glow {
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.shadow-glow-amber {
+  box-shadow: 0 0 40px rgba(245, 158, 11, 0.15);
+}
+
+/* Scroll Bar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-indigo-600;
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradientFlow 4s ease infinite;
+}
+
+/* Selection Styling */
+::selection {
+  @apply bg-indigo-600 text-white;
+}
